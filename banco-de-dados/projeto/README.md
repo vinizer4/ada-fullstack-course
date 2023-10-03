@@ -59,6 +59,24 @@ associado no máximo a um Contratado.
   - ProfessorMatricula referencia Professores.
   - TurmaId referencia Turma.
 
+### Relacionamentos Mapeados
+
+- *`Alunos` e `Matriculas`: Um aluno pode estar matriculado em diversas turmas, e uma turma pode ter vários alunos. (*M:N).
+  
+- *`Turmas` e `Disciplinas`: Uma turma é associada a uma única disciplina, mas uma disciplina pode ser oferecida em várias turmas. (*1:N).
+
+- *`Turmas` e `Matriculas`: Uma turma pode ter várias matrículas, mas uma matrícula é associada a uma única turma. (*1:N).
+
+- *`Contratados` e `UnidadesAcademicas`: Um contratado está associado a uma única unidade acadêmica, mas uma unidade pode ter vários contratados. (*N:1).
+
+- *`Dependentes` e `Contratados`: Um dependente está associado a um único contratado, mas um contratado pode ter vários dependentes. (*N:1).
+
+- *`Professores` e `Contratados`: Relação *1:1, onde a tabela `Professores` estende informações sobre os contratados que são professores.
+
+- *`Funcionarios` e `Contratados`: Relação *1:1, onde a tabela `Funcionarios` estende informações sobre os contratados que são funcionários.
+
+- *`Professores` e `Leciona`: Um professor pode lecionar várias turmas, enquanto uma turma pode ser lecionada por vários professores (*M:N, embora a prática comum seja 1:N).
+
 ### Observações:
 
 - *Contratados:* Podem ser tanto Professores quanto Funcionários e contém informações básicas relevantes para ambos.
@@ -66,6 +84,16 @@ associado no máximo a um Contratado.
 - *Dependente:* Possui uma relação com Contratados, indicando de quem é dependente.
 - *Matriculas:* Associa Alunos com Turmas, indicando em qual semestre o Aluno está matriculado em uma determinada Turma.
 - *Leciona:* Estabelece a relação entre Professores e Turmas que lecionam.
+
+### Descrição dos Testes de Consulta
+
+- *Verificar Matrículas*: As consultas verificam se determinado aluno está matriculado em uma turma específica em um semestre.
+
+- *Turmas de um Professor*: Verifica em quais turmas um professor está lecionando, mostrando as disciplinas e semestres correspondentes.
+
+- *Alunos em uma Turma*: Lista todos os alunos matriculados em uma turma específica.
+
+- *Disciplinas de Professores e Alunos*: As consultas agregadas (usando `STRING_AGG`) mostram todas as disciplinas que um professor está lecionando e que um aluno está matriculado, respectivamente.
 
 ### Operações Básicas Exploradas:
 
@@ -75,4 +103,4 @@ associado no máximo a um Contratado.
 - *Professores e Disciplinas:* Agrupar e exibir disciplinas que os professores estão lecionando.
 - *Alunos e Disciplinas:* Agrupar e exibir disciplinas em que os alunos estão matriculados.
 
-A estrutura acima ajuda a manter o modelo de dados coerente e estruturado, facilitando a implementação e manutenção do banco de dados.
+Essa documentação básica tem o objetivo de oferecer um entendimento claro das tabelas e relações criadas para auxiliar na manipulação e consulta dos dados no contexto de um sistema acadêmico.
