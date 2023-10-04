@@ -16,6 +16,13 @@ Acadêmica, que possui um código e um nome, sendo registrada a data de início 
 Além disso, os Contratados podem declarar seus dependentes, sendo que cada dependente pode estar
 associado no máximo a um Contratado.
 
+## Alunos
+- Vinicius Teixeira Saraiva
+- Isadora Francine Dias
+- Maria Eduarda De Oliveira Almeida
+- Jeyquisson Thauan da Fonseca Lima
+- Yasmin Caroline do Carmo Felício
+
 ### Modelo de Dados
 
 *1. Aluno*
