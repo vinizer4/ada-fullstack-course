@@ -84,6 +84,10 @@ associado no máximo a um Contratado.
 
 - *`Professores` e `Leciona`: Um professor pode lecionar várias turmas, enquanto uma turma pode ser lecionada por vários professores (*M:N, embora a prática comum seja 1:N).
 
+### Diagrama DER
+![image](https://github.com/vinizer4/ada-fullstack-course/assets/85684965/28a8c8e0-4339-42ec-bf91-738aee76863c)
+
+
 ### Observações:
 
 - *Contratados:* Podem ser tanto Professores quanto Funcionários e contém informações básicas relevantes para ambos.
